@@ -10,7 +10,7 @@ The admin can also schedule a start time and an end time for the claiming period
 ## Tools Used
 
 - [tRPC](https://trpc.io/) 
-  - Lighterweight than GraphQL and provides type safety in APIs with [zod](https://github.com/colinhacks/zod)
+  - Lighter-weight than GraphQL and provides type safety in APIs with [zod](https://github.com/colinhacks/zod)
 - [Next.js](https://nextjs.org/)
   - Quick iteration and easy deployment. SSR was a natural fit for serving the merkle data to the client at claim
 - [Typescript](https://www.typescriptlang.org/)
@@ -115,7 +115,7 @@ Add this private key to metamask and you should be able to create an airdrop for
 
 - The total number of tokens allocated for the airdop could potentially be not enough to cover all address claims
   - One possible solution would be computing the root on chain when the airdrop is created, then saving the root.
-  - The short term result of not having this check is that users have to do their due dilligence and check that enough funds have been allocated.
+  - The short term result of not having this check is that users have to do their due diligence and check that enough funds have been allocated.
 
 - Typechain build should pushed to NPM and imported into the webapp rather than committed directly.
 
@@ -134,9 +134,9 @@ Add this private key to metamask and you should be able to create an airdrop for
 
 ### Why implement the airdop as a claim?
 
-  - Requiring participants to claim filters out passive participants, who may not have contributed value to the projects ecosystem anyway.
-  - Removes the gas burden from the airdrop creator becuase they dont need to pay gas for each  `transfer()` call
-    - imo, most of the time it is more important to reduce friction on the supply side vs the demand side (the claiming addresses)
+  - Requiring participants to claim filters out passive participants who may not contribute value to the project's ecosystem.
+  - Removes the gas burden from the airdrop creator because they dont need to pay for each  `transfer()` call.
+    - imo, it is more important to reduce friction on the supply side vs the demand side (the claiming addresses)
 
 ### Why use a merkle tree?
 
