@@ -51,7 +51,7 @@ forge install
 npm run startNode
 ```
 
-In a seperate terminal window, in  `magna-contracts`
+In a separate terminal window, in  `magna-contracts`
 
 ```
 // build contracts and typechain, deploy
@@ -75,7 +75,7 @@ cd magna-webapp
 docker-compose up -d
  ```
 
-Finally, run the development server in a seperate tab:
+Finally, run the development server in a separate tab:
 
 ```bash
 npm install
